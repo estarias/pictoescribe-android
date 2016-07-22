@@ -11,48 +11,39 @@
        <div ng-controller="AppCtrl" ng-app="MyApp" layout-fill> 
             <div layout="column" class="layout">                
                 <md-toolbar class="md-toolbar-tools" layout-align="center">
-                    <md-button class="toolbar-button" ng-click="new()" show-gt-sm hide-sm> 
-                        <md-tooltip>Nuevo</md-tooltip>                        
+                    <md-button class="toolbar-button" ng-click="new()" show-gt-sm hide-sm>                        
                         <img src="img/toolbar/nuevo.png" class="toolbar-icon">
                         <br>Nuevo
                     </md-button>
-		    <md-button class="toolbar-button" ng-click="endline()" show-gt-sm hide-sm> 
-		        <md-tooltip>debajo</md-tooltip>
+		    <md-button class="toolbar-button" ng-click="endline()" show-gt-sm hide-sm>
                         <img src="img/toolbar/abajo.png" class="toolbar-icon">
                         <br>Debajo
 		    </md-button>
 		    <md-button class="toolbar-button" ng-click="backspace()"  show-gt-sm hide-sm> 
-		        <md-tooltip>Borrar</md-tooltip>
                         <img src="img/toolbar/borrar.png" class="toolbar-icon">
                         <br>Borrar
 		    </md-button>
 		    <md-button class="toolbar-button" ng-click="play_all()"  show-gt-sm hide-sm> 
-		        <md-tooltip>{{ play_text }}</md-tooltip>
                         <img src="{{ play_image }}" class="toolbar-icon">
                         <br>{{ play_text }}
 		    </md-button>
 		    <md-button class="toolbar-button" ng-click="save()"  show-gt-sm hide-sm> 
-		        <md-tooltip>Guardar</md-tooltip>
                         <img src="img/toolbar/guardar.png" class="toolbar-icon">
                         <br>Guardar                        
 		    </md-button>
 <!--		    <md-button class="toolbar-button" ng-click="print('printable')" show-gt-sm hide-sm> 
-		        <md-tooltip>Imprimir</md-tooltip>
                         <img src="img/toolbar/imprimir.png" class="toolbar-icon">
                         <br>Imprimir
 		    </md-button> -->
                     <md-button ng-show="!isAndroid" class="toolbar-button" ng-click="goFullscreen()" show-gt-sm hide-sm> 
-		        <md-tooltip>Agrandar</md-tooltip>
                         <img src="img/toolbar/ampliar.jpg" class="toolbar-icon">
                         <br>Agrandar
 		    </md-button> 
 		    <md-button ng-show="!isAndroid" class="toolbar-button" ng-click="exit()" show-gt-sm hide-sm> 
-		        <md-tooltip>Salir</md-tooltip>
                         <img src="img/toolbar/cerrar.png" class="toolbar-icon">
                         <br>Salir
 		    </md-button>   
                     <md-button  hide-gt-sm show-sm>
-		        <md-tooltip>Menu</md-tooltip>
 		        <md-icon class="material-icons" ng-class="it.size"> menu </md-icon>
 		    </md-button>
                 </md-toolbar >
@@ -67,7 +58,6 @@
                                ng-drag="true" ng-drag-data="it" ng-drag-success="onDragSuccess($data,$event)" ng-center-anchor="{{centerAnchor}}">
                                <!--ng-mouseenter="showIt(it.sound)" ng-mouseleave="hideIt()" -->
                               <div class="item" style="background-color:{{ it.color }};">
-                                   <md-tooltip>{{ it.name }}</md-tooltip>
                                    <img ng-src="{{ it.icon }}" class="grid-icon" alt="{{ it.name }}"> 
                                    <br><b>{{ it.name }}</b>
                               </div>
@@ -80,8 +70,7 @@
                         <div ng-repeat="it in keys">
                             <div class="keyboard-item" style="background-color:{{ it.color }};" 
                                  ng-drag="true" ng-drag-data="it" data-allow-transform="true"  >
-                            <md-tooltip>{{ it.name }}</md-tooltip>
-                           <a ng-click="toggleKey(it)" >
+                               <a ng-click="toggleKey(it)" >
                                <img  ng-src="{{ it.icon }}" class="keyboard-icon" alt="{{ it.name }}">
                            </a>
                            <br><b>{{ it.name }}</b>
