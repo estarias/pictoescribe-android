@@ -1,0 +1,114 @@
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/loading.gif) center no-repeat #fff;
+}
+
+
+
+body{
+  -webkit-print-color-adjust:exact;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.loyout{
+  height: 100vh;
+}
+
+.grid{
+  height: calc(100vh - 40vh);
+}
+
+.canvas{
+  overflow: auto;
+}
+
+.keyboard {
+   height: 25vh !important;
+   border-top: 10px solid rgba(63,81,181, 1);
+}
+
+.toolbar-icon{
+  width: 7vh;
+  height: 7vh;
+}
+
+.toolbar-button{
+ line-height: 100%;
+ font-size: 12px;
+}
+
+.keyboard-icon {
+  margin: 1em;
+  margin-bottom: 0;
+  width: 10vh;
+  height: 10vh;
+}
+
+.grid-icon{
+  margin: 1em;
+  margin-bottom: 0;
+  width: 20vh;
+  height: 20vh;
+}
+.item {
+  font-size: 12px;
+  margin: 4px;
+}
+
+.keyboard-item {
+  font-size: 12px;
+  margin: 4px;
+}
+
+[ng-drag]{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+[ng-drag]{
+/*        color:white;
+    text-align: center;*/
+    display: inline-block;
+/*        margin:10px 10px;*/
+    cursor: move;
+}
+ul.draggable-objects:after{
+    display: block;
+    content:"";
+    clear:both;
+}
+.draggable-objects li{
+    float:left;
+    display: block;
+}
+[ng-drag].drag-over{
+    border:solid 1px red;
+}
+[ng-drag].dragging{
+    opacity: 0.5;
+}
+[ng-drop]{
+    display: block;
+    position: relative;
+}
+[ng-drop].drag-enter{
+    border:solid 5px red;
+}
+[ng-drop] div{
+    position: relative;
+    z-index: 2;
+}
+
