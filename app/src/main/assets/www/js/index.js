@@ -209,8 +209,10 @@ angular.module('MyApp',  ['ngMaterial', 'ngDraggable', 'FBAngular'])
 
      $scope.onDropComplete=function(data,evt){
         var index = $scope.text[$scope.lines].indexOf(data);
-        if (index == -1)
-        write_key(data);
+        if (index == -1){
+            write_key(data);
+            show_categories();
+        }    
     }
     $scope.onDragSuccess=function(data,evt){
         var index = $scope.text[$scope.lines].indexOf(data);
