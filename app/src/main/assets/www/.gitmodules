@@ -1,0 +1,3 @@
+[submodule "pictoescribe"]
+	path = pictoescribe
+	url = https://github.com/estarias/pictoescribe.git

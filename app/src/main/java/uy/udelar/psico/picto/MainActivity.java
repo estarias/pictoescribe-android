@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient());
 
         try {
-            String html = readAssetFile("www/index.html");
-            webView.loadDataWithBaseURL("file:///android_asset/www/", html, "text/html", "UTF-8", null);
+            String html = readAssetFile("www/pictoescribe/index.html");
+            webView.loadDataWithBaseURL("file:///android_asset/www/pictoescribe/", html, "text/html", "UTF-8", null);
         } catch (IOException e) {
             Log.d("ERROR", e.getMessage());
         }
